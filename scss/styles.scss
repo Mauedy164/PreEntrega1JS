@@ -1,9 +1,3 @@
-*{
-    margin: 0;
-}
-
-
-
-
-
-@import 'components/navbar';
+@use 'base/reset';
+@use 'components/navbar';
+@use 'layout/cursos';
