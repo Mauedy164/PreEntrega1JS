@@ -1,29 +1,27 @@
-/* const precioParcial= (costoCursos, costosPersonas)=> {
-    pago = costoCursos * costosPersonas;
-    return pagoParcial;
-};
+let cuenta = 0;
 
-const precioFinal = (precioParcial1, precioParcial2, precioParcial3) =>{
-    pagoFinal = precioParcial1 + precioParcial2 + precioParcial3;
-    return pagoFinal;
-}; */
-const curso = parseInt(prompt("Elige el ID del curso que deseas tomar, solo selecciona un curso, posteriormente podrás añadir más"));
-console.log(curso);
-
-function cursoSolicitado(curso){
+function cursoSolicitado(){
+    const curso = parseInt(prompt("Elige el ID del curso que deseas tomar, solo selecciona un curso, posteriormente podrás añadir más"));
+    console.log(curso);
     if (!isNaN(curso) && (curso <= 9) && (curso >= 1)) {
         if((curso == 1) || (curso == 4) || (curso == 7)){
-            let precioCurso = 450;
-            return precioCurso;
+            precioCurso = parseInt(450);
+            cuenta += precioCurso;
         } else {
-            let precioCurso = 300;
-            return precioCurso;
+            precioCurso = parseInt(300);
+            cuenta += precioCurso;
         }
+        alert(`Tu cuenta al momento es de $${cuenta}`)
     } else {
         alert("Ingresa un ID correcto")
     }
 }
+let agregar = confirm("¿Quires añadir más cursos?");
 
-cursoSolicitado();
-let precioCursoSolicitado = cursoSolicitado;
-alert(`El precio del curso que solicitaste es de ${precioCursoSolicitado}`);
+while(agregar){
+    cursoSolicitado();   
+    agregar = confirm("¿Quires añadir más cursos?")
+}
+
+alert(`Tu cuenta final es de $${cuenta}`)
+

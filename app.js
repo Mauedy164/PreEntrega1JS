@@ -19,7 +19,7 @@ function cursoSolicitado(){
         } else {
             precioCurso = 300;
         }
-        alert(`El precio del curso seleccionado es de ${precioCurso}`)
+        alert(`El precio del curso seleccionado es de $${precioCurso}`)
     } else {
         alert("Ingresa un ID correcto")
     }
@@ -27,7 +27,7 @@ function cursoSolicitado(){
 
 
  function personasSolicitadas (){
-     const personas = parseInt(prompt("¿Cuántas personas tomarán el curso? (Máximo 30 personas por curso"));
+     const personas = parseInt(prompt("¿Cuántas personas tomarán el curso? (Máximo 30 personas por curso)"));
      console.log(personas)
      if (!isNaN(personas) && (personas <= 30) && (personas >= 1)) {
          alert(`El número de personas a tomar el curso son ${personas}`)
